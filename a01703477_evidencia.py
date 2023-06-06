@@ -1,6 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+with open(file_name, "rb") as template_file:
+        template_byte = template_file.read()
+
+    st.download_button(label="Click to Download Template File",
+                        data=template_byte,
+                        file_name="Police_Department_Incident_Reports__2018_to_Present.xlsx",
+                        mime='application/octet-stream')
 
 st.title('Police Incident Reports from 2018 and 2020 in San Francisco')
 
