@@ -16,7 +16,7 @@ def to_excel(df):
     return processed_data
 df_xlsx = to_excel(df)
 st.download_button(label='📥 Download Current Result',
-                                data=df,
+                                data=df_xlsx,
                                 file_name= 'Police_Department_Incident_Reports__2018_to_Present.xlsx')
 
 st.title('Police Incident Reports from 2018 and 2020 in San Francisco')
